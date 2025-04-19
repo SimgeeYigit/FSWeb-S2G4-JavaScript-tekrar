@@ -124,12 +124,12 @@ sayilar.forEach(sayi => {
 ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
 
 // 3d çözümü
-
-/* kodlar buraya */
+besyuzdenkucuksayilar = [];
+besyuzdenkucuksayilar = sayilar.filter(sayi => sayi < 500);
 
 // 3e çözümü
-
-/* kodlar buraya */
+siralisayilar = [];
+siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a-b);
 
 // 3f çözümü
 
