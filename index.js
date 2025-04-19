@@ -88,6 +88,7 @@ console.log(CemberinAlani(15,pi));
 */
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
+console.log(sayilar.length);
 
 let ucetambolunenler,
   enkucuk,
@@ -132,9 +133,24 @@ siralisayilar = [];
 siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a-b);
 
 // 3f çözümü
+tekraredensayilar = [];  
+let tekrarEdilenSayilar = {};  
 
-/* kodlar buraya */
+sayilar.forEach(sayi => {
+  if (tekrarEdilenSayilar[sayi]) {
+    tekrarEdilenSayilar[sayi]++;
+  } else {
+    tekrarEdilenSayilar[sayi] = 1;
+  }
+});
 
+for (let sayi in tekrarEdilenSayilar) {
+  if (tekrarEdilenSayilar[sayi] > 1) {  
+    let tekrarSayisi = tekrarEdilenSayilar[sayi];
+    let sonuc = `${sayi} sayısı ${tekrarSayisi} kere tekrar edilmiştir`;
+    tekraredensayilar.push(sonuc);
+  }
+}
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
